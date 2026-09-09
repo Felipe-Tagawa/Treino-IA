@@ -6,6 +6,9 @@ i = 0
 
 alunos = dict(zip(nomes, notas))
 
+for nome, nota in alunos.items():
+    print(f"Nome: {nome}, Nota:{nota}")
+
 while i < len(alunos):
 
     if notas[i] < 7:
