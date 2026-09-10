@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 alunos = {
     "Nome": ["Felipe", "Luigi", "Maria", "Pedro"],
@@ -13,7 +12,7 @@ df = pd.DataFrame(alunos)
 print(df.head(5))
 print(df.tail(5))
 print(f"Tamanho do DataFrame: {len(df)}")
-print(df.columns)
+print(df.columns.to_list())
 print(df.info())
 print(df.describe())
 print(df["Nota"])
