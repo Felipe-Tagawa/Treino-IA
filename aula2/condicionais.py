@@ -8,6 +8,6 @@ else:
 
 print(f"dano novo da arma: {dano}")
 
-danos = [dano + 5 for dano in range(2) if inteligencia >= 7]
+danos = [dano + 5 for dano in range(10) if inteligencia >= 7]
 
 print(danos)
