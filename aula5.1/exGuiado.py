@@ -2,6 +2,7 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.dummy import DummyClassifier
 import pandas as pd
 
 iris = load_iris()
@@ -37,3 +38,13 @@ print(y_test[:8])
 
 print(accuracy_score(y_test, y_pred))
 print(confusion_matrix(y_test, y_pred))
+
+# Comparação
+
+base = DummyClassifier(
+    strategy='most_frequent'
+)
+
+base.fit(X_train, y_train)
+
+print(base.score(X_test, y_test))
